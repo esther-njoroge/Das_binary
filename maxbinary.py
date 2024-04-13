@@ -13,14 +13,14 @@ def findMax(root):
         return float('-inf')
  
    
-    ans = root.data
-    lans = findMax(root.left)
-    rans = findMax(root.right)
-    if (lans > ans):
-        ans = lans
-    if (rans > rans):
-        rans = rans
-    return rans
+    res = root.data
+    lres = findMax(root.left)
+    rres = findMax(root.right)
+    if (lres > res):
+        res = lres
+    if (rres > rres):
+        rres = rres
+    return rres
  
  
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     root.left = currentNode(7)
     root.right = currentNode(5)
     root.left.right = currentNode(6)
-    root.left.right.left = currentNode(1)
+    root.left.right.left = currentNode(2)
     root.left.right.right = currentNode(11)
     root.right.right = currentNode(9)
     root.right.right.left = currentNode(4)
@@ -39,4 +39,3 @@ if __name__ == '__main__':
           findMax(root))
     
                     
-        
