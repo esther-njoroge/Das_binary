@@ -2,9 +2,7 @@ class currentNode:
     def __init__(self, data):
         self.data = data
         self.left = self.right = None
- 
 
- 
  
 def findMax(root):
  
@@ -13,17 +11,16 @@ def findMax(root):
         return float('-inf')
  
    
-    res = root.data
-    lres = findMax(root.left)
-    rres = findMax(root.right)
-    if (lres > res):
-        res = lres
-    if (rres > rres):
-        rres = rres
-    return rres
+    ans = root.data
+    lans = findMax(root.left)
+    rans = findMax(root.right)
+    if (lans > ans):
+        ans = lans
+    if (rans > ans):
+        ans = rans
+    return ans
  
  
-
 if __name__ == '__main__':
     root = currentNode(2)
     root.left = currentNode(7)
